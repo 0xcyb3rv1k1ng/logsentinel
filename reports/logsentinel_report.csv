@@ -1,0 +1,4 @@
+event_id	timestamp	username	ip	country	success	rules	metadata_json
+5	2025-12-30T12:05:00+00:00	alice	1.2.3.4	US	1	R2	{"by_rule": {"R2": {"user_failures_before_success": 5, "window_minutes": 30, "threshold": 5}}}
+6	2025-12-30T12:10:00+00:00	bob	5.6.7.8	US	1	R3	{"by_rule": {"R3": {"other_event_id": 7, "other_country": "FR", "minutes_between": 25, "window_minutes": 30, "note": "Consecutive successes from different countries in short time"}}}
+7	2025-12-30T12:35:00+00:00	bob	5.6.7.8	FR	1	R3	{"by_rule": {"R3": {"other_event_id": 6, "other_country": "US", "minutes_between": 25, "window_minutes": 30, "note": "Consecutive successes from different countries in short time"}}}
